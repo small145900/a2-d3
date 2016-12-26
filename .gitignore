@@ -1,0 +1,10 @@
+# dependencies
+/node_modules
+
+#editorconfig
+# package.json
+# systemjs.config.js
+# tsconfig.json
+# typings.json
+
+dist

@@ -1,0 +1,148 @@
+{
+	"namespace": "xxx",
+	"repository": "surface",
+	"isPraise": true,
+	"time": "2016.11.11", 
+	"list": [
+		{
+			"type": "DockerV1",
+			"typeId": "xxx",
+			"baseInfo": {
+										"command": "pull command",
+										"shortDesc": "this is short desc",
+										"fullDesc": "this is full desc",
+										"privilege": "private"
+									},
+			"tags": [
+								{
+									"tag": "v0.0.1",
+									"image": "ffddd563",
+									"size": "30K",
+									"time": "2016.10.07"
+								},
+								{
+									"tag": "v0.0.2",
+									"image": "ffddd573",
+									"size": "32K",
+									"time": "2016.10.08"
+								},
+								{
+									"tag": "v0.0.3",
+									"image": "ffddd579",
+									"size": "32K",
+									"time": "2016.10.09"
+								},
+								{
+									"tag": "v0.0.4",
+									"image": "ffddd583",
+									"size": "32K",
+									"time": "2016.10.10"
+								}
+							],
+			"collaborators": [
+												  {
+												 	 	"username": "tom",
+												 	 	"access": "collaborator"
+												  },
+												  {
+												 	 	"username": "lily",
+												 	 	"access": "collaborator"
+												  },
+												  {
+												 	 	"username": "json",
+												 	 	"access": "collaborator"
+												  },
+												  {
+												 	 	"username": "momo",
+												 	 	"access": "collaborator"
+												  }
+											 ],
+			"buildHistory": [
+												{
+													"id": "ffdd455",
+													"username": "xxx",
+													"time": "2015.03.03 14:30",
+													"branch": "master"
+												}
+											],
+			"triggers": [
+										{
+											"name": "github",
+											"branch": "master",
+											"dockfile": "/",
+											"triggerId": "xxx"
+										}
+									] 
+		},
+		{
+			"type": "DockerV2",
+			"typeId": "xxx",
+			"baseInfo": {
+										"command": "pull command",
+										"shortDesc": "this is short desc",
+										"fullDesc": "this is full desc",
+										"privilege": "private"
+									},
+			"tags": [
+								{
+									"tag": "v0.0.1",
+									"image": "ffddd563",
+									"size": "30K",
+									"time": "2016.10.07"
+								},
+								{
+									"tag": "v0.0.2",
+									"image": "ffddd573",
+									"size": "32K",
+									"time": "2016.10.08"
+								},
+								{
+									"tag": "v0.0.3",
+									"image": "ffddd579",
+									"size": "32K",
+									"time": "2016.10.09"
+								},
+								{
+									"tag": "v0.0.4",
+									"image": "ffddd583",
+									"size": "32K",
+									"time": "2016.10.10"
+								}
+							],
+			"collaborators": [
+												  {
+												 	 	"username": "tom",
+												 	 	"access": "collaborator"
+												  },
+												  {
+												 	 	"username": "lily",
+												 	 	"access": "collaborator"
+												  },
+												  {
+												 	 	"username": "json",
+												 	 	"access": "collaborator"
+												  },
+												  {
+												 	 	"username": "momo",
+												 	 	"access": "collaborator"
+												  }
+											 ],
+			"buildHistory": [
+												{
+													"id": "ffdd455",
+													"username": "xxx",
+													"time": "2015.03.03 14:30",
+													"branch": "master"
+												}
+											],
+			"triggers": [
+										{
+											"name": "github",
+											"branch": "master",
+											"dockfile": "/",
+											"triggerId": "xxx"
+										}
+									] 
+		}
+	]
+}

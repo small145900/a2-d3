@@ -1,0 +1,14 @@
+[
+	{
+		"email": "dockyard@gmail.com",
+		"id": 203,
+		"verify": true,
+		"primary": true
+	},
+	{
+		"email": "small@gmail.com",
+		"id": 204,
+		"verify": false,
+		"primary": false
+	}
+]

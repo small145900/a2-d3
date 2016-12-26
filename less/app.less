@@ -1,0 +1,2867 @@
+@import "font.less";
+@import "color.less";
+@import "space.less";
+
+* {
+	margin: 0;
+	padding: 0;
+	word-break:break-all;
+}
+
+a {
+	color: @black;
+}
+
+a, a:hover, a:active, a:focus{
+	text-decoration: none !important;
+	outline: none;
+}
+
+ul {
+	list-style: none;
+}
+
+input, textarea, select, button, input:focus, textarea:focus, select:focus, button:hover, button:focus {
+	outline: none;
+	border: none;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+	background: none !important;
+}
+.relative {
+	position: relative;
+}
+
+.col-orange {
+	color: @starOrange;
+}
+
+.col-gray {
+	color: @repoFontGray;
+}
+
+.col-skyblue {
+	color: @blue;
+}
+
+.bg-darkgray {
+	background: @userNavGray;
+}
+
+.bg-brownness {
+	color: @brownness;
+}
+
+.bg-outLetGray {
+	background: @outLetGray;
+}
+
+.bg-bodyGray {
+	background: @bodyGray;
+}
+
+.bg-white {
+	background: @white;
+}
+
+.mar-tp-no {
+	margin-top: 0;
+}
+
+.mar-rt-no {
+	margin-right: 0;
+}
+
+.mar-lt {
+	margin-left: 10px;
+}
+
+.mar-lt-five {
+	margin-left: 5px;
+}
+
+.mar-tp-five {
+	margin-top: 5px;
+}
+
+.mar-bt-five {
+	margin-bottom: 5px;
+}
+
+.mar-tp-eight {
+	margin-top: 8px;
+}
+
+.mar-bt-eight {
+	margin-bottom: 8px;
+}
+
+.mar-tb-eight {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.mar-tb-twenty {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.mar-t-twenty {
+	margin-top: 20px;
+}
+
+.mar-t-thirty {
+	margin-top: 30px;
+}
+
+.mar-bt-twenty {
+	margin-bottom: 20px;
+}
+
+.mar-lt-twenty {
+	margin-left: 20px;
+}
+
+.mar-bt-twenty-five {
+	margin-bottom: 25px;
+}
+
+.mar-bt-thirty {
+	margin-bottom: 30px;
+}
+
+.pad-no {
+	padding: 0;
+}
+
+.pad-rt-no {
+	padding-right: 0;
+}
+
+.pad-lr-five {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.pad-lr-twelve {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.pad-lt-twenty {
+	padding-left: 20px;
+}
+
+.pad-bt-twenty {
+	padding-bottom: 20px;
+}
+
+.over-hidden {
+	overflow: hidden;
+}
+
+.cursor-point {
+	cursor: pointer;
+}
+
+.disp-no {
+	display: none;
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+.row {
+	margin: 0;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-size: @baseSize;
+	color: @black;
+	font-family: 'Ubuntu Mono', monospace;
+}
+
+#repoContent {
+	background: @outLetGray;
+	width: 100%;
+	height: e("calc(100% - 44px)");
+	height: e("-webkit-calc(100% - 44px)");
+}
+
+/* index start */
+#header {
+	overflow: hidden;
+	font-size: @baseSize;
+	padding: 15px 12px;
+	background: lightblue;
+}
+
+#header, #header .space {
+	color: @white;
+}
+
+#header img {
+	width: 40px;
+	height: 40px;
+}
+
+.nav-rt .space {
+	margin-left: 10px;
+}
+
+.search {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.search input {
+	width: 40%;
+	color: #000;
+	padding: 6px 12px;
+	font-size: 12px;
+}
+
+.content-one {
+	overflow: hidden;
+	background: @bodyGray;
+	padding: 40px;
+	display: none;
+}
+
+.content-one .space {
+	display: block;
+	width: 100%;
+}
+
+.content-one .features {
+	width: 150px;
+	margin-right: 50px;
+}
+
+.content-one .character {
+	padding: 5px 12px;
+	background: lightblue;
+	color: @white;
+}
+
+.content-one .title {
+	padding: 10px 0;
+}
+
+.content-two {
+	padding: 40px 0 40px;
+	font-size: @baseSize;
+	color: @black;
+	background: @bodyGray;
+}
+
+.content-two .title {
+	font-size: @middleSize;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.content-two .space {
+	text-align: justify;
+}
+
+.content-two .font-big { 
+	font-size: 16px;
+}
+
+.surface-carousel {
+	width: 100%;
+	height: 250px;
+	border: 1px solid @gray;
+}
+
+.content-three {
+	padding: 60px 0 130px;
+	background: linear-gradient(0, #28529d, #1d66b8, #127bd3);
+	background: -webkit-linear-gradient(0, #28529d, #1d66b8, #127bd3);
+	color: @bodyGray;
+}
+
+.content-three .space {
+	text-align: center;
+}
+
+.content-three .space img {
+	width: 30px;
+	height: auto;
+	max-height: 30px;
+}
+
+.content-three .space .text {
+	margin-top: 20px;
+}
+
+#footer {
+	padding: 20px 12px;
+	background: lightblue;
+	color: @white;
+	overflow: hidden;
+}
+
+#footer .space {
+	padding: 4px 14px;
+	border-radius: 24px;
+	background: #d7d7d7;
+	margin-left: 10px;
+	font-size: @baseSize;
+}
+/* index end */
+
+/* nav start */
+#nav {
+	width: 100%;
+	height: 50px;
+	background: @menuBlack;
+}
+
+#nav .menu, #nav .user {
+	height: 100%;
+	margin: 0;
+}
+
+#nav .menu a, #nav .user a {
+	font-size: @smallSize;
+}
+ 
+#createRepo a:hover, 
+#createRepo a:active{
+	color: @white;
+	background: @blue;
+	border-radius: @baseRadius;
+}
+
+#createRepo a:hover, #createRepo a:active, #userSetting a:hover, #userSetting a:active {
+	border-radius: 0;
+}
+
+#nav .menu img {
+	width: 38px;
+	height: auto;
+	margin-top: 5px;
+	max-height: 41px;
+}
+
+#nav .user {
+	float: right;
+}
+
+#nav .menu li a, #nav .user > li > a {
+	padding: 0 8px;
+	height: 50px;
+	line-height: 50px;
+	margin-right: @baseMargin;
+	color: @white;
+}
+
+#nav .user > li > a {
+	padding: 0 6px;
+}
+
+#nav .menu .logo, #nav .menu .logo:hover, #nav .menu .logo:active {
+	background: none;
+}
+
+#nav .menu .logo a, #nav .menu .logo a:hover, #nav .menu .logo a:active {
+	padding: 0;
+	background: none;
+	margin-right: 30px;
+}
+
+#nav .user > li > a {
+	padding: 0;
+}
+
+#nav .menu li a, #nav .user > li {
+	float: left;
+}
+
+#nav .user > li > a {
+	display: inline-block;
+	padding: 0 6px;
+}
+
+#nav .user > li {
+	height: 44px;
+	position: relative;
+}
+
+#nav .menu li .active {
+	color: @baseBlue;
+	border-bottom: 3px solid @baseBlue;
+}
+
+#nav .user > li input {
+	width: 100%;
+	height: 28px;
+	margin-top: 11px;
+	padding: 0 5px;
+	border-radius: @baseRadius;
+	background: #e7e7e7;
+	font-size: @baseSize;
+}
+
+#nav .user li .active {
+	color: @baseBlue;
+}
+
+#nav .user > li input:focus {
+	background: @white;
+}
+
+#nav .user li:first-child {
+	margin-right: 6px;
+}
+
+#createRepo, #userSetting {
+	width: 250px;
+	background: @createGray;
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	z-index: 10000;
+	display: none;
+}
+
+#createRepo li a:hover, 
+#userSetting li a:hover {
+	background: @baseBlue;
+	color: @white;
+}
+
+#nav .user .show {
+	display: block;
+}
+
+@media screen and (max-width: 1100px) {
+	#nav .user .filter {
+		width: 170px;	
+	}
+}
+
+@media screen and (max-width: 840px) {
+	#nav .user .filter {
+		display: none;
+	}
+
+	#nav .user {
+		float: right;
+	}
+
+	#nav .menu {
+		width: 65%;
+	}
+
+	#nav .menu-rt {
+		width: 35%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#nav .menu-rt {
+		width: 25%;
+	}
+
+	#nav .menu-rt .add {
+		display: none;
+	}
+
+	#nav .menu {
+		width: 75%;
+	}
+
+	#nav .menu .logo a {
+		margin-right: 15px;
+	}
+}
+
+@media screen and (max-width: 642px) {
+	#nav .user .create, #nav .user .add {
+		display: none;
+	}
+	.content-three {
+		padding-bottom: 160px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#nav .menu-rt {
+		width: 20%;
+	}
+
+	#nav .menu {
+		width: 80%;
+	}
+
+	#nav .menu .logo a {
+		margin-right: 10px;
+	}
+
+	#nav .menu li a, #nav .user > li > a {
+		padding: 0 6px;
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 485px) {
+	#nav .menu {
+		width: 100%;
+	}
+
+	#nav .menu-rt {
+		display: none;
+	}
+
+	#nav .menu li a {
+		padding: 0 7px;
+	}
+}
+
+#userSetting {
+	width: 150px;
+}
+
+#createRepo li, 
+#createRepo li a, 
+#userSetting li, 
+#userSetting li a {
+	width: 100%;
+}
+
+#createRepo li, #userSetting li {
+	height: 44px;
+}
+
+#createRepo a, #userSetting a {
+	display: inline-block;
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	font-size: @baseSize;
+	padding-left: 12px;
+}
+#nav i {
+	margin: 0 5px 0 10px;
+}
+/* nav end */
+
+/* repo list start */
+#repoList {
+	// margin-top: @baseMargin+50px;
+}
+
+// #repoList .filter-repo {
+// 	text-align: center;
+// 	height: 40px;
+// 	line-height: 40px;
+// 	font-size: 20px;
+// 	margin-top: @baseMargin+55px;
+// 	margin-bottom: @baseMargin+70px;
+// }
+
+// #repoList .filter-repo input {
+// 	width: 500px;
+// 	margin-right: @baseMargin;
+// 	// background: #eaeaea;
+// 	border: 1px solid #eaeaea;
+// 	border-radius: 24px 24px 24px 24px;
+// 	padding: 0 12px;
+// 	font-size: @baseSize;
+// }
+
+// #repoList .filter-repo .search {
+// 	position: absolute;
+// 	right: 30px;
+// 	top: -41px;
+// 	padding: 5px;
+// 	cursor: pointer;
+// }
+
+#repoList .content {
+	width: 100%;
+	margin-left: @baseMargin+2px;
+}
+
+#repoList .media-repo,
+.user-repo .media-repo {
+	margin-top: @baseMargin+30px;
+	overflow: hidden;
+}
+
+#repoList .repo-left {
+	height: 405px;
+	background: @browseWhite;
+	padding: 0;
+}
+
+#repoList .repo-left span {
+	display: inline-block;
+	width: 100%;
+	padding: 16px 20px;
+	text-overflow: ellipsis;
+	font-size: @baseSize;
+	color: @black;
+}
+
+#repoList .repo-left span:first-child,
+.user-repo .repo-left span:first-child {
+	font-size: @smallSize+0.2;
+	cursor: pointer;
+	color: @white;
+}
+
+#repoList .repo-left .bg-orange,
+.user-repo .repo-left .bg-orange {
+	background: @repoOrange;
+}
+
+#repoList .repo-left .bg-blue,
+.user-repo .repo-left .bg-blue {
+	background: @baseBlue;
+}
+
+#repoList .repo-body,
+.user-repo .repo-body {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#repoList .repo-body a {
+	display: inline-block;
+	width: e("calc( (100% - 5px) /2)");
+	width: e("-webkit-calc( (100% - 5px) /2)");
+	padding: 12px;
+	margin-bottom: 5px;
+	background: @browseWhite;
+	vertical-align: top;
+	height: 200px;
+	border-bottom: 5px solid transparent;
+}
+
+#repoList .repo-body a:hover,
+.user-repo .repo-body a:hover {
+	border-bottom: 5px solid @baseBlue;
+}
+
+#repoList .repo-body a:nth-child(2n),
+.user-repo .repo-body a:nth-child(2n) {
+	margin-left: 5px;
+}
+
+#repoList .repo-body h3,
+.user-repo .repo-body h3 {
+	margin-top: 8px;
+	font-size: @smallSize;
+	color: @black;
+}
+
+#repoList .repo-body h5,
+.user-repo .repo-body h5 {
+	font-size: @baseSize;
+	height: 40px;
+	overflow: hidden;
+	color: @orgFontGray;
+}
+
+#repoList .star-fork,
+.user-repo .star-fork {
+	font-size: @middleSize;
+	margin-top: @baseMargin+50px;
+	margin-bottom: 0;
+	position: relative;
+}
+
+#repoList .star-fork i,
+.user-repo .star-fork i {
+	font-size: 24px;
+}
+
+#repoList .star-fork i.fa-info-circle,
+.user-repo .star-fork i.fa-info-circle {
+	font-size: 18px;
+	position: absolute;
+	top: 8px;
+	right: -4px;
+	opacity: 0.5;
+}
+
+#allRepo {
+	padding-top: 40px;
+	padding-bottom: 20px;
+	background: @outLetGray;
+}
+
+#allRepo .repo-body {
+	width: 100%;
+	font-size: 0;
+	padding: 0;
+}
+
+#allRepo .repo-body a:nth-child(3n) {
+	margin-right: 0;
+}
+
+#allRepo .repo-body a {
+	display: inline-block;
+	width: e("calc((100% - 10px) / 3)");
+	width: e("-webkit-calc((100% - 10px) / 3)");
+	padding: 12px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	background: @browseWhite;
+	height: 200px;
+	border-bottom: 5px solid transparent;
+}
+
+#allRepo .repo-body a:hover {
+	border-bottom: 5px solid @baseBlue;
+}
+
+#allRepo .repo-body h3 {
+	margin-top: 8px;
+	font-size: @smallSize;
+	color: @black;
+}
+
+#allRepo .repo-body h5 {
+	font-size: 16px;
+	height: 36px;
+	overflow: hidden;
+	color: @orgFontGray;
+}
+
+#allRepo .star-fork {
+	font-size: 20px;
+	margin-top: @baseMargin+50px;
+	margin-bottom: 0;
+	position: relative;
+}
+
+#allRepo .star-fork i {
+	font-size: 24px;
+}
+
+#allRepo .org-name {
+	height: 40px;
+	line-height: 40px;
+	color: @orgNumBlue;
+	font-size: @smallSize+0.2;
+	padding-left: 12px;
+}
+
+#allRepo .star-fork i.fa-info-circle {
+	font-size: 18px;
+	position: absolute;
+	top: 8px;
+	right: -4px;
+	opacity: 0.5;
+}
+
+#allRepo .filter-repo {
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+
+#allRepo .filter-repo input {
+	width: 100%;
+	background: @browseWhite;
+	padding: 8px 35px 8px 10px;
+	font-size: @baseSize;
+	border-radius: 5px;
+}
+
+#allRepo .filter-repo .filter {
+	position: absolute;
+	right: 3px;
+	top: 4px;
+	padding: 5px;
+	cursor: pointer;
+	font-size: @smallSize+0.2;
+}
+
+@media screen and (max-width: 640px) {
+	#repoList .repo-body a {
+		width: 100%;
+	}
+	
+	#repoList .repo-body a:nth-child(2n) {
+		margin-left: 0;
+	}
+
+	#allRepo .repo-body a {
+		width: 100%;
+	}
+	
+	#allRepo .repo-body a {
+		margin-right: 0;
+	}
+
+	#repoList .repo-left {
+		height: 815px;
+	}
+}
+/* repo list end */
+
+/* repo create start */
+#newRepoContent {
+	width: 100%;
+	height: e("calc(100% - 44px)");
+	height: e("-webkit-calc(100% - 44px)");
+	background: @repoNewGray;
+}
+#newRepo {
+	padding-top: @baseMargin+50px;
+	background: @bodyGray;
+	padding-bottom: 20px;
+}
+
+#newRepo .guide {
+	position: relative;
+}
+
+#newRepo li {
+	height: auto;
+	width: 100%;
+	padding-bottom: 65px;
+	border-left: 1px dashed @repoStepGray;
+}
+
+
+#newRepo li:last-child {
+	border: none;
+}
+
+#newRepo li span {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 5px;
+	font-size: @baseSize;
+	background: @repoStepGray;
+	color: @white;
+	vertical-align: top;
+	position: relative;
+	left: -20px;
+}
+
+.step-brown {
+	background: @orgStepBlue !important;
+}
+
+#newRepo li:last-child span {
+	top: 5px;
+}
+
+#newRepo li b {
+	font-size: @baseSize;
+	margin-top: 10px;
+	font-weight: normal;
+	display: inline-block;
+	width: e("calc(100% - 52px)");
+	width: e("-webkit-calc(100% - 52px)");
+	color: @repoStepFontGray;
+}
+
+#newRepo .info {
+	padding: 0;
+}
+
+#newRepo input, #newRepo textarea {
+	width: 100%;
+	padding: 10px;
+	font-size: @baseSize;
+	background: @repoFormGray;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px @insetBlack inset;
+}
+
+#newRepo input::-webkit-input-placeholder, 
+#newRepo textarea::-webkit-input-placeholder {
+	color: @placeHolderGray;
+}
+
+#newRepo textarea {
+	height: 250px;
+	over-x: hidden;
+	resize: vertical
+}
+
+#newRepo .visible-type {
+	margin: @baseMargin+3px auto;
+	font-size: 16px;
+	padding-left: 10px;
+}
+
+#newRepo .visible-type > span {
+	display: inline-block;
+	width: 65px;
+}
+
+#newRepo .visible-type label {
+	width: e("calc(95% - 65px)");
+	width: e("-webkit-calc(95% - 65px)");
+	font-weight: normal;
+}
+
+#newRepo .visible-type input {
+	width: 18px;
+	height: 18px;
+	position: relative;
+	top: 5px;
+	margin-top: 5px;
+	box-shadow: none;
+}
+
+#newRepo .visible-type input:active, #newRepo .visible-type input:focus {
+	outline: none;
+	border: none;
+}
+
+#newRepo .visible-type input:last-child {
+	margin-left: @baseMargin + 2px;
+}
+
+#newRepo .clear-gap {
+	font-size: 0;
+}
+
+#newRepo .select {
+	width: 42%;
+	color: @gray;
+	margin-right: 3%;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	position: relative;
+}
+
+#newRepo .chosed {
+	display: inline-block;
+	box-shadow: 1px 1px 1px @insetBlack inset;
+	padding: 0 12px;
+	border-radius: 5px;
+	height: 44px;
+	line-height: 44px;
+	width: 100%;
+	color: @black;
+	font-size: @baseSize;
+	background: @gray;
+}
+
+#newRepo .option {
+	position: absolute;
+	top: 45px;
+	right: 0;
+	width: 100%;
+	background: @createGray;
+	border: 1px solid @repoFormGray;
+	color: @black;
+	font-size: @baseSize;
+	text-align: center;
+}
+
+#newRepo .option li {
+	cursor: pointer;
+	height: 44px;
+	line-height: 44px;
+	padding: 0;
+	border: none;
+}
+
+#newRepo .option li:hover {
+	background: @placeHolderGray;
+	color: @white;
+}
+
+#newRepo .select i {
+	position: absolute;
+	right: 10px;
+	top: 12px;
+	color: @createGray;
+	font-size: @smallSize;
+}
+
+#newRepo .select + input {
+	width: 55%;
+}
+#newRepo option {
+	padding: 12px;
+}
+
+#newRepo .btn-create {
+	font-size: @smallSize;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: @baseRadius;
+	color: @white;
+	background: @baseBlue;
+}
+
+/* repo create end */
+
+/* repo detail start */ 
+#repoDetail .table>tbody>tr>td, 
+#repoDetail .table>tbody>tr>th, 
+#repoDetail .table>tfoot>tr>td, 
+#repoDetail .table>tfoot>tr>th, 
+#repoDetail .table>thead>tr>td, 
+#repoDetail .table>thead>tr>th{
+  padding:8px 30px;
+  font-size: @baseSize;
+}
+
+#repoDetail .table .title {
+	font-size: @smallSize;
+}
+
+#repoDetail .dropdown-menu .user-name{
+  padding:5px 12px;
+  color:#999;
+}
+
+#repoDetail .dropdown-menu .items>a{
+  padding:5px 24px;
+  display:block;
+}
+#repoDetail .dropdown-menu .items>a:hover{
+  background-color:#2682c1;
+  color:#fff;
+}
+#repoDetail .dropdown-menu .divider{
+  background-color:#adadad;
+}
+
+#repoDetail .btn-group .btn{
+  box-shadow: 1px 1px 4px rgba(0,0,0,.3);
+  -webkit-box-shadow:1px 1px 4px rgba(0,0,0,.3);
+  margin-left:0;
+  border:0;
+  outline:none;
+  background-image:-webkit-gradient(linear,0 0,0 100%,from(@triggerWhite),to(#e6e6e6));
+  background-image:-webkit-linear-gradient(top,@triggerWhite,#e6e6e6);
+  background-image:linear-gradient(to bottom,@triggerWhite,#e6e6e6);
+}
+#repoDetail .btn-group .btn.active{
+  box-shadow: inset 3px 3px 6px rgba(0,0,0,.2);
+  -webkit-box-shadow:inset 3px 3px 6px rgba(0,0,0,.2);
+  background:#f77462;
+  color:#fff;
+}
+#repoDetail .alert-warning{
+  background-color:#d9eeed;
+  border-color:#b4d0cf;
+  color:#5b8a90;
+}
+
+#repoDetail .fa-star {
+  cursor: pointer;
+}
+#repoDetail .header .repo-name {
+  font-size: @smallSize;
+}
+#repoDetail .header .repo-user {
+  color: @repoNamelBlue;
+  font-size: @middleSize;
+}
+#repoDetail .header .repo-status {
+  color: @modifyGray;
+  font-size: @baseSize;
+}
+#repoDetail .repo-nav {
+	border: none;
+	padding: 0 0 20px;
+	background: @detailGray;
+  height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+	#repoDetail .repo-nav {
+		height: auto;
+	}
+}
+
+#repoDetail .user-content {
+	background: @outLetGray;
+}
+
+#repoDetail .repo-nav li {
+	background: @detailGray;
+	text-align: center;
+	padding: 0;
+	border: none;
+}
+
+#repoDetail .repo-nav li>a {
+	border: none;
+}
+
+#repoDetail .repo-nav li>a:hover {
+	background: none;
+	border: none;
+	border-radius: 0;
+}
+
+#repoDetail .repo-nav>li {
+	margin: 0;
+	width: 100%;
+}
+
+#repoDetail .repo-nav .active,
+#repoDetail .repo-nav .active>a {
+	background: @outLetGray;
+	border: none;
+	border-radius: 0;
+}
+
+#repoDetail .repo-nav .blank {
+	background: @detailGray;
+}
+
+#repoDetail .repo-nav .blank a {
+	color: @detailGray;
+}
+
+#repoDetail .clear-padding-left {
+  padding-left: 0;
+}
+
+// .repo-nav .nav-tabs > li > a:hover,
+// .repo-nav .nav-tabs > li > a:focus {
+//   background-color: #ddd;
+//   border: 0;
+// }
+// .repo-nav .nav-tabs > li > a,
+// .repo-nav .nav-tabs > .active > a:hover {
+//   border-radius: 0;
+//   border: 0;
+// }
+
+// .repo-nav >li.active > a,
+// .repo-nav >li.active > a:hover,
+// .repo-nav >li.active > a:focus {
+//   background-color: @userNavBlue;
+//   color: @white;
+//   border: none;
+// }
+
+.repo-content {
+  background-color: @outLetGray;
+  height: 100%;
+}
+.bast-info {
+  position: relative;
+  padding-top: 20px;
+}
+.bast-info h5 {
+  padding: 2px 10px;
+  position: relative;
+  font-size: @smallSize;
+}
+.bast-info h5 .fa-pencil {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.bast-info .ok-btn {
+  display: none;
+  background-color: #3da1e5;
+  padding: 8px 30px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.bast-info textarea {
+  resize: none;
+  border-radius: 4px;
+  width: 100%;
+  padding: 5px 10px;
+  box-shadow: 1px 1px 1px @insetBlack inset;
+  background: @userFormWhite;
+}
+.bast-info textarea.pull-command-text {
+  border-bottom: 2px solid @orange;
+  background: @userFormWhite;
+}
+.bast-info .make-public {
+  // float: right;
+  // display: inline-block;
+  // width: 182px;
+}
+.bast-info .make-public-btn {
+  background-color: @baseBlue;
+  width: 100%;
+  text-align: center;
+  color: @white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: @smallRadius;
+}
+.bast-info .make-public-h5 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.bast-info .delete-repo-btn {
+  background-color: @repoDelOrange;
+  width: 100%;
+  text-align: center;
+  color: @white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-radius: @smallRadius;
+}
+@media screen and (max-width: 1000px) {
+	.bast-info .delete-repo-btn {
+		margin-top: 30px;
+	}
+}
+#tags {
+  padding-top: 30px;
+}
+#collaborators {
+  padding-top: 30px;
+}
+#collaborators .remove {
+  color: #a9200d;
+}
+#collaborators .left-block {
+  // padding: 0;
+  // width: 60%;
+  // float: left;
+  // display: inline-block;
+}
+#collaborators .right-block {
+  // padding: 0;
+//   width: 35%;
+//   float: right;
+//   display: inline-block;
+}
+#collaborators .right-block h5 {
+  padding-left: 8px;
+}
+#collaborators .form-control {
+  border: 0;
+}
+#collaborators .input-group-addon {
+  background-color: #f77462;
+  padding: 0 12px;
+  color: #fff;
+  border: 0;
+}
+#collaborators .fa-plus {
+  padding: 0 12px;
+}
+#buildHistory {
+  padding-top: 30px;
+}
+#buildHistory .fa-trash-o {
+  color: #f77462;
+  cursor: pointer;
+}
+#buildHistory a {
+  color: #3d76cc;
+}
+#buildTriggers .create-build {
+  display: inline-block;
+}
+#buildTriggers .create-build-div {
+  text-align: right;
+  padding-top: 30px;
+}
+#buildTriggers .creat-dropdown-toggle {
+  background-color: #3da1e5;
+  color: #fff;
+  border: 0;
+  position: relative;
+  padding: 10px 10px 10px 15px;
+}
+#buildTriggers .setting {
+  position: relative;
+  display: inline-block;
+}
+#buildTriggers .setting > ul {
+  display: none;
+  position: absolute;
+  right: 0;
+}
+#buildTriggers .fa-gear {
+  cursor: pointer;
+}
+#buildTriggers .setting:hover > ul {
+  display: block;
+}
+#buildTriggers .setting:hover .fa-gear {
+  color: #3da1e5;
+}
+#buildTriggers .setting:hover > ul > li {
+  padding: 5px 16px;
+  cursor: pointer;
+}
+#buildTriggers .setting:hover > ul > li:hover {
+  background-color: #504e4e;
+  color: #fff;
+}
+#buildTriggers ul {
+  white-space: nowrap;
+  background-color: @outLetGray;
+}
+#buildTriggers ul li a {
+  padding: 5px 12px;
+}
+.create-repo-nav {
+  padding-right: 30px;
+}
+.create-repo-nav > span {
+  display: table-cell;
+  width: 1%;
+  padding: 12px 0;
+  text-align: center;
+}
+.create-repo-nav > span:first-child {
+  border-radius: 6px 0 0 0;
+}
+.create-repo-nav > span.active {
+  background-color: @triggerNavGray;
+  color: #fff;
+}
+.create-repo-modal .modal-header {
+  padding: 0;
+  border-bottom: 2px solid @triggerNavGray;
+}
+.info-circle {
+  color: #4c7fcd;
+}
+#createRepoModal .step-div {
+  display: none;
+}
+#createRepoModal .step-show {
+  display: block;
+}
+#runTriggerModal .ssh-key {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+}
+#runTriggerModal .ssh-key input {
+  border-radius: 4px;
+  padding: 6px 12px;
+  width: 100%;
+}
+#runTriggerModal .ssh-key .fa-clipboard {
+  position: absolute;
+  right: 5px;
+  top: 9px;
+  color: @triggerDropGray;
+}
+
+#repoDetail {
+	width: 100%;
+	height: e("calc(100% - 50px)");
+	height: e("-webkit-calc(100% - 50px)");
+	background: @outLetGray;
+}
+#repoDetail button.close{
+  width:30px;
+  border-radius:0 4px 0 0;
+  margin-top:-1px;
+  position:absolute;
+  right:0;
+  top:0;
+  bottom:0;
+}
+
+#repoDetail button.close:hover{
+  background-color:@triggerNavGray;
+  opacity:1;
+  color:#fff;
+}
+#repoDetail .modal-footer{
+  border:0;
+}
+
+#repoDetail .modal-header{
+  border-bottom:2px solid @triggerNavGray;
+  position:relative;
+}
+#repoDetail .modal-body{
+  padding:15px 38px;
+}
+#repoDetail .modal-content{
+  background-color:@triggerWhite;
+}
+#repoDetail .modal-content .title {
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	position: relative;
+	text-align: left;
+	padding-left: 12px;
+}
+#repoDetail .input-group .input{
+  border:1px solid @triggerDropGray;
+  width:100%;
+  padding:6px 12px;
+  border-radius:4px 0 0 4px;
+  background: @triggerWhite;
+}
+#repoDetail .input-group .button{
+  padding:17px 15px 18px;
+  background-color:@triggerDropGray;
+  border-radius:0 @smallRadius @smallRadius 0;
+  color:@triggerWhite;
+}
+#repoDetail .ibutton{
+  border-radius:@smallRadius;
+  cursor:pointer;
+	width: 110px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+#repoDetail .btn-blue{
+  background: @baseBlue;
+  border: 1px solid @baseBlue;
+  color: @white;
+}
+#repoDetail .btn-cancel{
+  background:none;
+  border: 1px solid @triggerDropGray;
+  color:@triggerDropGray;
+}
+#repoDetail .btn-danger{
+  background-color: @orange;
+  color:#fff;
+}
+
+.modal-footer .ibutton+.ibutton{
+  margin-bottom:0;
+  margin-left: 10px;
+}
+
+#repoDetail .repo-type {
+	float: left;
+	position: relative;
+	// text-align: center;
+	// padding: 0;
+	// height: 100%;
+	// background: @detailGray;
+}
+
+#repoDetail .chosed-type {
+	display: block;
+	width: 160px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px 0 10px;
+	color: @white;
+	background: @orange;
+	position: relative;
+}
+
+#repoDetail .chosed-type i {
+	position: absolute;
+	right: 8px;
+	top: 12px;
+}
+
+#repoDetail .repo-type ul {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	background: @userFormWhite;
+	width: 160px;
+	z-index: 10000;
+}
+
+#repoDetail .repo-type li {
+	height: 44px;
+	line-height: 44px;
+	width: 100%;
+	cursor: pointer;
+	padding-left: 12px;
+}
+
+#repoDetail .repo-type li:hover {
+	background: @createGray;
+	color: @white;
+}
+
+#repoDetail .head {
+	padding: 40px 0;
+	background: @detailGray;
+}
+
+// #repoDetail .nav>li>a {
+// 	padding-top: 0;
+// 	padding-bottom: 0;
+// 	max-height: 60px;
+// 	line-height: 60px;
+// }
+
+// #repoDetail .repo-type li:hover {
+// 	background: @outLetGray;
+// 	color: @black;
+// }
+
+#repoDetail .repo-type .active {
+	background: @outLetGray;
+	color: @black;
+}
+#repoDetail .content {
+	height: e("calc(100% - 140px)");
+	height: e("-webkit-calc(100% - 140px)"); 
+	background: @outLetGray;
+}
+/* repo detail end */ 
+
+/* org list start */
+
+#orgList, #repoList {
+	padding-top: @baseMargin+30px;
+	padding-bottom: @baseMargin+30px;
+	width: 100%;
+	height: e("calc(100% - 44px)");
+	height: e("-webkit-calc(100% - 44px)");
+	background: @outLetGray;
+}
+
+#repoList {
+	height: auto;
+}
+
+#orgList .title, #repoList .title {
+	font-size: 16px;
+}
+
+#orgList .title button,
+#repoList .title button {
+	background: @baseBlue;
+	color: @white;
+	padding: 10px 20px;
+	border-radius: @middleRadius;
+	font-size: @smallSize;
+}
+
+// #orgList .title button:hover, 
+// #orgList .title button:focus, 
+// #orgList .title button:active,
+// #repoList .title button:hover, 
+// #repoList .title button:focus, 
+// #repoList .title button:active {
+// 	color: @white;
+// 	background: @blue;
+// }
+
+#orgList .media-org {
+	background: @browseWhite;
+	margin-top: @baseMargin+14px;
+	width: 100%;
+	padding: 10px 0;
+	height: 200px;
+	border-left: 5px solid transparent;
+}
+
+#orgList .media-org:hover {
+	border-left: 5px solid @browseBlue;
+}
+
+#orgList .org-left, #orgList .org-body {
+	float: left;
+}
+
+#orgList .org-left {
+	width: 35%;
+	height: 100%;
+	padding: 50px 10px;
+	border-right: 2px solid @orgGapGray;
+	text-align: center;
+	overflow: hidden;
+}
+
+#orgList .org-body {
+	width: e("calc(65% - 16px)");
+	width: e("-webkit-calc(65% - 16px)");
+	text-align: center;
+	color: @orgNumBlue;
+}
+
+#orgList .org-body span{
+	font-size: @middleSize;
+}
+
+#orgList .org-body small {
+	color: @orgFontGray;
+	font-size: @baseSize;
+}
+
+#orgList img {
+	width: 60px;
+	height: 60px;
+	max-width: 100%;
+	// background: #eaeaea;
+	// border-radius: 5px;
+	// padding: 10px;
+}
+
+#orgList .org-left span {
+	display: block;
+	width: 100%;
+	max-height: 50px;
+	overflow: hidden;
+	margin-top: 5px;
+	font-size: @smallSize;
+	color: @orgNameBlue;
+}
+
+/* org list end */
+
+/* org create start */
+#newOrgContent {
+	width: 100%;
+	height: e("calc(100% - 44px)");
+	height: e("-webkit-calc(100% - 44px)");
+	background: @orgNewGray;
+}
+#createOrg {
+	padding-top: 60px;
+	height: 100%;
+	width: 100%;
+}
+
+#createOrg .guide {
+	font-size: @smallSize;
+	color: @orgStepFontGray;
+}
+
+#createOrg .steps {
+	margin: 0 auto;
+}
+
+#createOrg .step-nav {
+	height: 44px;
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+}
+
+#createOrg .create .space, #createOrg .guide {
+	margin-left: e("calc(33.3% / 2 - 20px)");
+	margin-left: e("-webkit-calc(33.3% / 2 - 20px)");
+	margin-right: e("calc(33.3% / 2 - 20px)");
+	margin-right: e("-webkit-calc(33.3% / 2 - 20px)");
+}
+
+#createOrg li {
+	width: 33.3%;
+	border-bottom: 1px solid @orgStepGray;
+	float: left;
+}
+
+#createOrg li span {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 5px;
+	font-size: @smallSize;
+	text-align: center;
+	color: @white;
+	background: @orgStepGray;
+	position: relative;
+	top: 20px;
+}
+
+#createOrg li i {
+	margin-top: 12px;
+}
+
+#createOrg .create {
+	margin: 60px auto 20px;
+}
+
+#createOrg .first-step input, 
+#createOrg .first-step .save,
+#createOrg .second-step > input, 
+#createOrg .second-step .save,
+#userSet .new-pwd input,
+#userSet .new-pwd .save {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 20px;
+	padding: 0 12px;
+	font-size: @baseSize;
+	border-radius: 5px;
+	background: @orgFormGray;
+	box-shadow: 1px 1px 1px @insetBlack inset;
+}
+
+#createOrg .first-step .save,
+#createOrg .second-step .save,
+#userSet .new-pwd .save {
+	color: #fff;
+	background: @orgStepGray;
+	font-size: @smallSize;
+	box-shadow: none;
+}
+
+#createOrg .first-step .create, 
+#createOrg .second-step .create,
+#userSet .new-pwd .save .create,
+#userSet .new-pwd .submit {
+	background: @baseBlue;
+	font-size: @smallSize;
+}
+
+#createOrg .first-step input::-webkit-input-placeholder {
+	color: @iconGray;
+}
+
+#createOrg .team-list {
+	overflow: hidden;
+	margin-top: 30px;
+	margin-bottom: 45px;
+}
+
+#createOrg .teams, #createOrg .members {
+	width: 48.5%;
+	float: left;
+	background: #d7d7d7;
+	border-radius: 5px 5px 0 0;
+	padding-top: 10px;
+}
+
+#createOrg .teams {
+	margin-right: 3%;
+}
+
+#createOrg .teams .title,
+#createOrg .members .title {
+	height: 40px;
+	padding: 0 12px;
+	color: @teamTitleBlue;
+}
+
+#createOrg .teams .title {
+	line-height: 40px;
+}
+
+#createOrg .teams li, 
+#createOrg .members li {
+	width: 100%;
+	padding: 10px 20px 10px 12px;
+	position: relative;
+	color: @teamFontBlue;
+}
+
+#createOrg .members li {
+	padding: 10px 20px 10px 20px;
+}
+
+#createOrg .teams li,
+#createOrg .members li {
+	border: none;
+}
+
+#createOrg .members li i {
+	color: @orange;
+}
+
+#createOrg .teams li:hover,
+#createOrg .members li:hover {
+	background: @teamGray;
+	color: #fff;
+	i {
+		color: #fff;
+	}
+}
+
+#createOrg .teams .active {
+	background: @teamGray;
+	color: #fff;
+	i {
+		color: #fff;
+	}
+}
+
+#createOrg .teams li i,
+#createOrg .members li i {
+	position: absolute;
+	right: 8px;
+	top: 2px;
+}
+
+#createOrg .members .title input,
+#createOrg .members .title .add {
+	float: left;
+}
+
+#createOrg .members .title input {
+	width: 80%;
+	padding: 8px;
+	border-radius: 5px 0 0 5px;
+	background: #eaeaea;
+}
+
+#createOrg .members .title .add {
+	width: 20%;
+	float: left;
+	padding: 12px 0 13px;
+	text-align: center;
+	background: @repoOrange;
+	border-radius: 0 5px 5px 0;
+	color: #fff;
+	font-size: 16px;
+}
+
+#createOrg .to-repo {
+	padding: 9px 15px;
+	border-radius: 5px;
+	background: @baseBlue;
+	color: #fff;
+	cursor: pointer;
+}
+
+/* org create end */
+
+/* user setting */
+#userEdit {
+	width: 100%;
+	height: e("calc(100% - 44px)");
+	height: e("-webkit-calc(100% - 44px)");
+	background: @outLetGray;
+}
+
+#userSet {
+	// padding-top: 40px;
+}
+
+#userSet h4 {
+	font-size: @smallSize;
+}
+
+#userSet .new-pwd input {
+	background: @userFormWhite;
+}
+
+#userSet .content, #userSet .title {
+	margin: 0 auto;
+}
+
+#userSet .title {
+	height: 80px;
+	line-height: 80px;
+	font-size: 16px;
+}
+
+#userSet .user-edit {
+	background: @userNavGray;
+}
+
+#userSet .user-nav {
+	text-align: center;
+	border: none;
+}
+
+#userSet .user-nav li:first-child {
+	border: none;
+}
+
+#userSet .user-nav a {
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	padding: 0;
+	margin: 0;
+	display: block;
+	border: none;
+	background: none;
+	font-size: @smallSize;
+}
+
+#userSet .user-nav>li.active, 
+.user-nav>li.active:focus, 
+.user-nav>li.active:hover {
+	background: @userNavBlue;
+}
+
+#userSet .user-nav>li.active>a,
+.user-nav>li.active>a:focus, 
+.user-nav>li.active>a:hover {
+	color: @white;
+}
+
+#userSet .tips {
+	width: 40%;
+	padding: 20px 0;
+}
+
+#userSet .visib {
+	width: 30%;
+	height: 80px;
+	line-height: 80px;
+	margin-right: 50px;
+	font-size: 16px;
+	border:1px solid #b3b3b3;
+}
+
+#userSet .visib input {
+	margin-left: 5%;
+	margin-right: 5px;
+}
+
+#userSet .email {
+	font-size: 0;
+}
+
+#userSet .email input {
+	width: 72%;
+	padding: 6px 12px;
+	font-size: 16px;
+	background: @userFormWhite;
+	border-radius: 5px;
+	margin-right: 3%;
+	margin-bottom: 12px;
+}
+
+#userSet .add-email {
+	padding: 30px 0;
+	background: @userEmailGray;
+}
+
+#userSet .emails {
+	margin-top: 15px;
+	border-radius: 3px;
+}
+
+#userSet .emails li {
+	width: 100%;
+	padding: 8px 12px;
+	font-size: 0;
+	background: @userEmailWhite;
+}
+
+#userSet .emails li:nth-child(2n) {
+	background: @outLetGray;
+}
+
+#userSet .emails .addr,
+#userSet .emails .verified, 
+#userSet .emails .relation,
+#userSet .emails .delet {
+	display: inline-block;
+	font-size: 16px;
+}
+
+#userSet .emails .verified {
+	color: @loginBlue;
+	cursor: pointer;
+}
+
+#userSet .emails li:first-child .verified {
+	color: #000;
+}
+
+#userSet .emails .addr {
+	width: 50%;
+}
+
+#userSet .emails .verified, #userSet .emails .relation {
+	width: 22%;
+}
+
+#userSet .emails .delet {
+	width: 6%;
+	cursor: pointer;
+	color: @orange;
+}
+
+#userSet .password {
+	margin: 40px 0;
+	padding: 40px 0 20px;
+	background: #eaeaea;
+	text-align: center;
+	font-size: @baseSize;
+}
+
+#userSet .password li {
+	margin-bottom: 10px;
+}
+
+#userSet .password .space-text {
+	display: inline-block;
+	width: 140px;
+	padding: 6px 0;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+#userSet .password input {
+	width: 50%;
+	border-radius: 3px;
+	border: 1px solid #b3b3b3;
+	padding: 6px 12px;
+}
+
+#userSet .password button {
+	padding: 10px 30px;
+	background: @blue;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 3px;
+}
+
+#userInfo .add {
+	background: @orange;
+	width: 25%;
+	padding: 5px 0;
+	color: #fff;
+	font-size: @baseSize;
+	border-radius: 5px;
+}
+
+#userInfo .text {
+	padding-left: 0;
+	padding-right: 37px;
+}
+
+@media screen and (max-width: 768px) {
+	#userInfo .text {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+
+#userSet .new-pwd {
+	background: @outLetGray;
+	padding: 30px 0;
+}
+
+#userSet .account {
+	background: @userEmailGray;
+}
+/* user end */
+
+/* sign in & sign up start */
+#access, #app {
+	width: 100%;
+	height: 100%;
+}
+
+#access {
+	overflow-y: hidden;
+}
+
+#access .require {
+	color: @menuGray;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+
+#access .content {
+	background: @repoNewGray;
+	width: 100%;
+	height: e("calc(100% - 190px)");
+	height: e("-webkit-calc(100% - 190px)");
+}
+
+#access .header {
+	text-align: center;
+	position: relative;
+}
+
+#access .header img {
+	width: 100%;
+	height: 180px;
+}
+
+#access .header .title {
+	position: absolute;
+	display: block;
+	bottom: 38px;
+	font-size: @bigPlusSize;
+	color: @white;
+	width: 100%;
+	text-align: center;
+	display: block;
+}
+
+#access .group-content {
+	position: relative;
+	height: 100%;
+}
+
+#access .group-content .contact {
+	position: absolute;
+	width: 100%;
+	top: e("calc((100% - 300px) / 2)");
+	top: e("-webkit-calc((100% - 300px) / 2)");
+}
+
+@media screen and (max-width: 992px) {
+	#access .group-content .contact {
+		top: e("calc((100% - 450px) / 2)");
+		top: e("-webkit-calc((100% - 450px) / 2)");
+	} 
+}
+
+#access .header .title.contact {
+	bottom: 28px;
+}
+
+#access .header .title .help {
+	font-size: @smallSize;
+	font-weight: normal;
+}
+
+#app .banner {
+	position: relative;
+	width: 100%;
+}
+
+#app .banner .search-info {
+	position: absolute;
+	top: 59%;
+	left: 27%;
+	width: 46%;
+	border-radius: @smallRadius;
+	font-size: @smallSize;
+	background: @white;
+	opacity: 0.8;
+	padding: 0 12px;
+	height: 44px;
+}
+
+#app .banner img {
+	width: 100%;
+	height: auto;
+}
+
+#access .banner .text {
+	position: relative;
+	bottom: 80px;
+	font-size: @bigPlusSize;
+	word-spacing: 12px;
+	color: @white;
+}
+
+#access .footer, 
+#app .footer {
+	width: 100%;
+	background: @footerGray;
+	position: fixed;
+	bottom: 0;
+}
+
+#access .footer .intro, 
+#access .footer .team,
+#app .footer .intro, 
+#app .footer .team {
+	display: inline-block;
+	margin-bottom: 0;
+	padding: 12px 0;
+	text-align: center;
+}
+
+#access .footer .intro,
+#app .footer .intro {
+	text-align: left;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#access .footer .team,
+#app .footer .team {
+	text-align: right;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+	#access .footer .intro,
+	#access .footer .team,
+	#app .footer .intro,
+	#app .footer .team {
+		text-align: left;
+	}
+}
+
+#access .footer .intro,
+#app .footer .intro {
+	color: @gray;
+}
+
+#access .footer .team,
+#app .footer .team {
+	color: @white;
+	padding-left: 10px;
+}
+
+#access .footer .team .space,
+#app .footer .team .space {
+	padding: 5px;
+	cursor: pointer;
+}
+
+#access .footer .team .space:hover,
+#app .footer .team .space:hover {
+	color: @yellow;
+}
+
+#access .footer .team .active,
+#app .footer .team .active {
+	color: @yellow;
+}
+
+#access .browse {
+	padding-top: 40px;
+	height: 100%;
+}
+
+#access .nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: #b3b3b3;
+	opacity: 0.6;
+	height: 40px;
+	line-height: 40px;
+}
+#access .nav img {
+	width: 40px;
+	height: auto;
+	max-height: 40px;
+}
+
+#access .nav .space {
+	display: inline-block;
+	padding: 0 20px;
+	height: 100%;
+	font-size: 16px;
+}
+
+#access .nav .space:hover {
+	color: #fff;
+	background: blue;
+}
+
+#access .login-content {
+	width: 350px;
+	margin: 0 auto;
+	padding-top: 150px;
+}
+
+#access .login .space, #access .sign-up .space {
+	display: block;
+	width: 100%;
+	height: 40px;
+	margin-bottom: 25px;
+	border-radius: @smallRadius;
+	font-size: @baseSize;
+	position: relative;
+}
+
+#access .login input, #access .sign-up input {
+	width: 100%;
+	height: 100%;
+	padding: 0 32px 0 12px;
+	border-radius: 5px;
+	background: @gray;
+	color: @black;
+	font-size: @baseSize;
+	box-shadow: 1px 1px 1px @insetBlack inset;
+}
+
+#access .login .space > i, #access .sign-up .space > i {
+	position: absolute;
+	right: 9px;
+	top: 12px;
+	color: @iconGray;
+	font-size: @smallSize;
+}
+#access .login .user, #access .login .pwd, #access .login .user input:focus, #access .login .pwd input:focus,
+#access .sign-up .user, #access .sign-up .pwd, #access .sign-up .user input:focus, #access .sign-up .pwd input:focus {
+	background: @gray; 
+}
+
+#access .tips {
+	color: @orange;
+	font-size: @tinySize;
+	display: block;
+	margin-bottom: 10px;
+}
+
+#access .ng-untouched, #access .ng-valid, #access .ng-dirty {
+	background: @gray;
+}
+
+#access .login .sign-in, #access .sign-up .sign-in {
+	background: @loginBlue;
+	color: #fff;
+	font-size: @smallSize;
+}
+
+#access .login .google {
+	background: @orange;
+	color: #fff;
+	width: 48%;
+	text-align: center;
+	border-radius: 5px 0 0 5px;
+	padding: 5px 0;
+	font-size: @baseSize;
+}
+
+#access .login .github {
+	background: @signBlue;
+	color: #fff;
+	width: 48%;
+	text-align: center;
+	border-radius: 0 5px 5px 0;
+	padding: 5px 0;
+	font-size: @baseSize;
+}
+
+#access .login .forget-pwd {
+	display: block;
+	text-align: center;
+	color: @iconGray;
+	margin-bottom: 15px;
+	font-size: @baseSize;
+}
+
+#access .navbar, #app .navbar {
+	width: 100%;
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	height: 50px;
+	line-height: 50px;
+}
+
+#access .navbar,
+#app .navbar {
+	border: none;
+}
+
+#access .logo, #app .logo {
+	width: 35%;
+	float: left;
+	text-align: center;
+	background: @headerWhite;
+	opacity: 0.75;
+	height: 50px;
+}
+
+#access .menu, #app .menu {
+	width: 65%;
+	float: left;
+}
+
+#access .logo img, #app .logo img {
+	width: 115px;
+	height: auto;
+	max-height: 41px;
+	margin-top: 10px;
+}
+
+#access .menu .space, #app .menu .space {
+	width: 15%;
+	background: @headerWhite;
+	opacity: 0.75;
+	font-size: @smallSize;
+	float: left;
+	text-align: center;
+}
+
+#access .menu .space:hover, 
+#access .menu .space:active,
+#app .menu .space:hover, 
+#app .menu .space:active {
+	background: none;
+	color: #fff;
+}
+
+#access .menu .space.active,
+#app .menu .space.active {
+	background: none;
+	color: #fff;
+}
+
+#access .menu .space-remain,
+#app .menu .space-remain {
+	width: 25%;
+	float: left;
+	background: @headerWhite;
+	opacity: 0.75;
+	color: #fff;
+}
+
+@media screen and (max-width: 980px) { 
+	#access .logo, #app .logo {
+		width: 30%;
+	}
+	#access .menu, #app .menu {
+		width: 70%;
+	}
+	#access .header .text, #app .header .text {
+		bottom: 30px;
+	}
+	#access .menu .space-remain, 
+	#app .menu .space-remain {
+		display: none;
+	}
+	#access .menu .space, #app .menu .space {
+		width: 20%;
+	}
+	#app .banner .search-info {
+		height: 42px;
+	}
+}
+
+@media screen and (max-width: 640px) { 
+	#access .logo, #app .logo {
+		width: 30%;
+	}
+	#access .menu, #app .menu {
+		width: 70%;
+	}
+	#access .menu .space, #app .menu .space {
+		width: 20%;
+	}
+	#access .menu .space-remain, 
+	#app .menu .space-remain {
+		width: 0;
+	}
+	#access .header .text,
+	#app .header .text {
+		bottom: 10px;
+	}
+	#app .banner .search-info {
+		height: 36px;
+	}
+}
+
+@media screen and (max-width: 625px){
+	#access .logo, #app .logo {
+		width: 40%;
+	}
+	#access .menu, #app .menu {
+		width: 60%;
+	}
+	#access .header, 
+	#access .menu .tutorial, 
+	#access .menu .docs,
+	#app .header, 
+	#app .menu .tutorial, 
+	#app .menu .docs {
+		display: none;
+	}
+	#access .header .text,
+	#app .header .text {
+		bottom: 5px;
+	}
+	#access .menu .space,
+	#app .menu .space {
+		opacity: 1;
+	}
+	#access .logo, #app .logo {
+		opacity: 1;
+	}
+	#access .menu .space.active,
+	#app .menu .space.active {
+		color: @signBlue;
+	}
+	#access .menu .space:hover,
+	#app .menu .space:hover {
+		color: @signBlue;
+	}
+	#access .menu .space, #app .menu .space {
+		width: 33.3%;
+	}
+	#access .login-content {
+		padding-top: 250px;
+	}
+	#access .content {
+		height: 100%;
+	}
+	#access .browse {
+		padding-top: 80px;
+	}
+}
+
+#access .browse .space {
+	margin-bottom: 20px;
+	overflow: hidden;
+	width: 100%;
+	font-size: @baseSize;
+	border-left: 5px solid transparent;
+}
+
+#access .browse .info li {
+	float: left;
+	background: @browseWhite;
+	padding: 25px 0 25px;
+	text-align: center;
+}
+
+#access .browse .info li i {
+	font-size: @middleSize;
+}
+
+#access .browse .space:hover {
+	border-left: 5px solid @browseBlue;
+}
+
+#access .browse .info .name,
+#access .browse .info .star {
+	margin-right: 2px;
+}
+
+#access .browse .info .name {
+	width: e("calc(43% - 4px)");
+	width: e("-webkit-calc(43% - 4px)");
+}
+
+#access .browse .info .star, 
+#access .browse .info .download {
+	width: 20%;
+	padding: 30px 0;
+	color: @browseIconGray;
+}
+
+#access .browse .info .detail {
+	width: 17%;
+	padding: 30px 0;
+	background: @browseIconGray;
+	color: @white;
+	cursor: pointer;
+}
+
+#access .browse .info .active {
+	background: @browseBlue;
+}
+
+#access .browse .name img {
+	width: 60px;
+	height: 60px;
+	margin: 5px 10px 0 12px;
+}
+
+#access .browse .name .text {
+	display: block;
+}
+
+#access .browse .name .text:first-child {
+	color: @browseFontBlue;
+}
+
+#access .contact img {
+	margin-bottom: 20px;
+	width: 120px;
+}
+
+#access.explore {
+	overflow-y: auto;
+	background: @outLetGray;
+	padding-bottom: 88px;
+}
+
+@media screen and (max-width: 425px) {
+	#access .contact img {
+		width: 80px;
+	}
+	#app .banner .search-info {
+		height: 30px;
+		width: 50%;
+		left: 25%;
+	}
+}
+/* sign in & sign up end */
+
+/* register email start */ 
+#registerEmail {
+	width: 100%;
+	height: 100%;
+	background: @registerEmailWhite;
+	text-align: center;
+}
+
+#registerEmail img {
+	width: 300px;
+	height: auto;
+}
+
+#registerEmail .text {
+	font-size: @baseSize;
+	color: @registerEmailBlue;
+	margin: 30px auto 40px;
+}
+
+#registerEmail .do-login {
+	padding: 12px 35px;
+	background: @baseBlue;
+	color: @registerEmailWhite;
+	font-size: @smallSize;
+	border-radius: @smallRadius;
+}
+
+#registerEmail .verticl {
+	width: 100%;
+	min-height: 240px;
+	position: relative;
+	top: e("calc((100% - 340px) / 2)");
+	top: e("-webkit-calc((100% - 340px) / 2)");	
+}
+/* register email end */ 
+/* brochur start */
+
+#brochur {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+#brochur .info-one {
+ 	width: 100%;
+ 	background: @white;
+ 	text-align: center;
+ 	padding-top: 40px;
+}
+
+#brochur .info-one .title {
+ 	font-size: @bigSize;
+ 	margin: 40px auto;
+}
+
+#brochur .info-one .space {
+ 	margin-left: 12px;
+ 	font-size: @smallSize;
+ 	padding: 5px 0;
+}
+
+#brochur .info-one .space:hover {
+ 	border-bottom: 1px solid @black;
+}
+
+#brochur .info-one .banner {
+ 	width: 100%;
+ 	height: auto;
+}
+
+ // #brochur .content {
+ // 	width: 100%;
+ // 	height: 100%;
+ // 	background: #ddd;
+ // 	border-bottom: 2px solid #aaa;
+ // 	transform:rotate(5deg) translate(10,20);
+ // 	border:1px solid #aaa;
+ // }
+
+#brochur .info-two,
+#brochur .info-three,
+#brochur .info-four,
+#brochur .info-five {
+ 	background: @registerEmailWhite;
+ 	// border-top: 2px solid @brochurGray;
+ 	width: 100%;
+ 	// transform: translate(-32px, -55px) rotate(5deg);
+ 	// box-shadow: 1px 1px 1px @brochurGray inset;
+	padding: 0;
+}
+
+#brochur .info-three,
+#brochur .info-five {
+ 	background: @white;
+ 	// box-shadow: none;
+}
+
+#brochur .info-three {
+ 	// transform: translate(-25px, -150px) rotate(-5deg);
+}
+
+#brochur .info-five {
+ 	// transform: translate(-25px, -220px) rotate(-5deg);
+}
+
+#brochur .info-two .title,
+#brochur .info-three .title,
+#brochur .info-four .title,
+#brochur .info-five .title {
+ 	font-size: @bigSize;
+ 	color: @brochurGreen;
+}
+
+#brochur .info-three {
+	padding-bottom: 0;
+}
+ 
+#brochur .text {
+	font-size: @middleSize;
+} 
+
+#brochur .media-left, #brochur .media-body {
+	vertical-align: middle;
+}
+
+#brochur .info-two .media-left,
+#brochur .info-four .media-left {
+	padding-right: 10%;
+	width: 40%;
+}
+
+#brochur .info-three .media-body,
+#brochur .info-five .media-body {
+	padding-left: 10%;
+	width: 40%;
+}
+
+#brochur .info-one img,
+#brochur .info-two img,
+#brochur .info-three img,
+#brochur .info-four img,
+#brochur .info-five img {
+	width: 100%;
+	height: auto;
+	max-height: 100%;
+}
+
+#brochur .info-one img {
+	width: 200px;
+	max-width: 100%;
+	height: auto;
+	margin-top: -6px;
+}
+
+#brochur .add-bg {
+	height: 213px;
+}
+
+#brochur .add-bg img {
+	width: 100%;
+	height: auto;
+}
+
+#brochur .info-six {
+	background: @registerEmailWhite;
+	padding: 0 0 280px;
+	width: 100%;
+}
+
+#brochur .info-six .title {
+	font-size: @bigSize;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+#brochur .info-six .rotate {
+	position: relative;
+	top: 65px;
+}
+
+#brochur .info-six .start {
+	padding: 12px 38px;
+	font-size: @middleSize;
+	border: 3px solid @brochurGreen;
+	border-radius: 5px;
+}
+/* brochur end */ 
+/* prompt start */ 
+#prompt .mcover {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.5;
+	z-index: 10000;
+}
+
+#prompt .info {
+	position: fixed;
+	top: e("calc((100% - 260px) / 2)");
+	left: e("calc((100% - 380px) / 2)");
+	width: 380px;
+	padding: 60px 40px;
+	text-align: center;
+	color: @black;
+	background: @triggerWhite;
+	font-size: @smallSize;
+	border-radius: @smallRadius;
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	z-index: 10000;
+}
+
+#prompt .info .text {
+	display: inline-block;
+	text-align: left;
+	color: #f00;
+}
+/* prompt end */ 
+/* user repo start */ 
+.user-repo .repo-body {
+	padding: 0 5px;
+}
+
+.user-repo .repo-body a {
+	display: block;
+	width: 100%;
+	padding: 12px;
+	margin-bottom: 5px;
+	background: @browseWhite;
+	vertical-align: top;
+	height: 200px;
+	border-bottom: 5px solid transparent;
+}
+
+.user-repo .repo-left {
+	min-height: 200px;
+	background: @browseWhite;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.user-repo .repo-left img {
+	width: 150px;
+	height: auto;
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+
+.user-repo .repo-left span {
+	display: block;
+	width: 100%;
+	padding: 5px 0;
+	text-overflow: ellipsis;
+	font-size: @baseSize;
+	color: @black;
+}
+
+.user-repo .repo-left .time {
+	color: @orgFontGray;
+	font-size: @tinySize;
+	border-top: 1px solid @userNavGray;
+}
+/* user repo end */ 

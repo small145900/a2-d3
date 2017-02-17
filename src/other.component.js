@@ -9,15 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var d3 = require("d3/build/d3.min.js");
-var AppComponent = (function () {
-    function AppComponent() {
+var OtherComponent = (function () {
+    function OtherComponent(router) {
+        this.router = router;
         this.svgpad = 50;
-        this.stagePad = 140;
-        this.stageWidth = 30;
-        this.stageHeight = 30;
-        this.actionPad = 15;
-        this.actionToTop = 0;
+        this.stagePad = 100;
+        this.stageWidth = 26;
+        this.stageHeight = 26;
+        this.actionPad = 4;
         this.componentWidth = 15;
         this.componentHeight = 15;
         this.componentPad = 4;
@@ -27,16 +28,14 @@ var AppComponent = (function () {
         this.runModeWidth = 10;
         this.addComponentWidth = 10;
         this.arcPadBig = 10;
-        this.arcPadSmall = 3;
-        this.addIconPad = 3;
-        this.lineWidth = 10;
+        this.arcPadSmall = 6;
+        this.addIconPad = 6;
         this.dataset = [
             {
                 "name": "stage0",
                 "id": "s0",
                 "type": "start-stage",
                 "runMode": "serial",
-                // "runResult":3,
                 "actions": [
                     {
                         "components": [
@@ -206,7 +205,7 @@ var AppComponent = (function () {
         this.stageLength = this.dataset.length;
     }
     ;
-    AppComponent.prototype.ngOnInit = function () {
+    OtherComponent.prototype.ngOnInit = function () {
         var currentDragIndex;
         var endPointIndex;
         var elementType = '';
@@ -283,6 +282,32 @@ var AppComponent = (function () {
         })
             .call(drag);
         // add stage pic
+        // itemStage.append('svg:image')
+        // 	.attr('width',_this.stageWidth)
+        // 	.attr('height',_this.stageHeight)
+        // 	.attr('class','stage-pic')
+        // 	.attr('href',function(d,i){
+        // 		if(i===0){
+        // 			return 'img/start-latest.svg';
+        // 		}else if(i===(_this.dataset.length-1)){
+        // 			return 'img/end-latest.svg';
+        // 		}
+        // 		return 'img/stage-latest.svg'
+        // 	})
+        // 	.attr('data-name',function(d){
+        // 		return d.name
+        // 	})
+        // 	.attr('data-id',function(d){
+        // 		return d.id
+        // 	})
+        // 	.attr('data-type',function(d){
+        // 		return d.type
+        // 	})
+        // 	.each(function(d,i){
+        // 		d.translateX = i*(_this.stageWidth+_this.stagePad)+_this.svgpad;
+        // 		d.translateY = _this.stageHeight*2;
+        // 	});
+        // add stage circle
         itemStage.append('circle')
             .attr('cx', _this.stageWidth / 2)
             .attr('cy', _this.stageHeight / 2)
@@ -343,7 +368,6 @@ var AppComponent = (function () {
                 var padding = _this.componentPad * 3;
                 var componentRows = Math.ceil(a.components.length / _this.rowActionNum);
                 currentActionY += componentRows * (_this.componentHeight + _this.componentPad) - _this.componentPad + padding * 2 + _this.actionPad;
-                y = i % 2 === 0 ? y + _this.actionToTop : y;
                 return 'translate(0,' + y + ')';
             });
             // add components
@@ -409,51 +433,32 @@ var AppComponent = (function () {
                     var padding = _this.componentPad * 3;
                     var x0 = x - padding;
                     var y0 = a.components[0].y - padding;
+                    // var x1 = length>=_this.rowActionNum?(a.components[_this.rowActionNum-1].x+_this.componentWidth+_this.componentPad):(a.components[length-1].x+_this.componentWidth+_this.componentPad);
+                    // var x1 = _this.rowActionNum * (_this.componentWidth + _this.componentPad) - _this.componentPad * 2;
                     var x1 = x + _this.rowActionNum * (_this.componentWidth + _this.componentPad) - _this.componentPad + padding;
                     var y1 = a.components[length - 1].y + _this.componentHeight + padding;
+                    // var y1 = y0+_this.gatherHeight;
                     var x2 = x0 + (x1 - x0) / 2; //每个stage的中心点
-                    var y2 = i % 2 === 0 ? y0 - _this.stageHeight / 2 - _this.actionPad - _this.actionToTop : y0 - _this.stageHeight / 2 - _this.actionPad; //弧线控制点
+                    var y2 = y0 - _this.stageHeight / 2 - _this.actionPad; //弧线控制点
                     var x3 = x2 + _this.stageWidth / 2 + _this.stagePad / 2; //弧线在stage-line的中点
                     var x4 = x2 - _this.stageWidth / 2 - _this.stagePad / 2; //弧线在stage-line的中点
-                    var x5 = x1 + _this.lineWidth;
-                    var x6 = x5 + _this.arcPadBig;
-                    var x7 = x0 - _this.lineWidth;
-                    var x8 = x7 - _this.arcPadBig;
-                    var x9 = x0 + (x1 - x0) / 2; //action x轴中点
-                    var y3 = y0 + (y1 - y0) / 2; //action y轴中点
-                    var y4 = y3 - _this.arcPadBig;
-                    var lineToRight = 'L' + x5 + ' ' + y3;
-                    var lineToLeft = 'L' + x7 + ' ' + y3;
-                    var arcToRight = 'Q' + x6 + ' ' + y3 + ' ' + x6 + ' ' + y4;
-                    var arcToLeft = 'Q' + x8 + ' ' + y3 + ' ' + x8 + ' ' + y4;
-                    var bordRightBottom = 'M' + x1 + ' ' + y3 + 'L' + x1 + ' ' + (y1 - _this.arcPadSmall) + 'Q' + x1 + ' ' + y1 + ' ' + (x1 - _this.arcPadSmall) + ' ' + y1;
-                    var bordBottom = 'L' + (x0 + _this.arcPadSmall) + ' ' + y1 + 'Q' + x0 + ' ' + y1 + ' ' + x0 + ' ' + (y1 - _this.arcPadSmall);
-                    var bordLeftBottom = 'L' + x0 + ' ' + y3;
-                    var bottom = bordRightBottom + bordBottom + bordLeftBottom;
-                    var dottedEnd = i % 2 === 0 && ai === 0 ? y0 - _this.actionPad - _this.actionToTop : y0 - _this.actionPad;
-                    var dottedHeight = Math.abs(dottedEnd / 4) - 2;
-                    var dottedToTop = 'L' + x9 + ' ' + (y0 - dottedHeight) + 'M' + x9 + ' ' + (y0 - dottedHeight - 2) + 'L' + x9 + ' ' + (y0 - dottedHeight * 2 - 4) + 'M' + x9 + ' ' + (y0 - dottedHeight * 2 - 6) + 'L' + x9 + ' ' + (y0 - dottedHeight * 3 - 6);
-                    var bordLeftTop = 'M' + x0 + ' ' + y3 + 'L' + x0 + ' ' + (y0 + _this.arcPadSmall) + 'Q' + x0 + ' ' + y0 + ' ' + (x0 + _this.arcPadSmall) + ' ' + y0;
-                    var bordTop = 'L' + x9 + ' ' + y0 + 'L' + x9 + ' ' + dottedEnd + 'M' + x9 + ' ' + y0 + 'L' + (x1 - _this.arcPadSmall) + ' ' + y0 + 'Q' + x1 + ' ' + y0 + ' ' + x1 + ' ' + (y0 + _this.arcPadSmall);
-                    if (d.runMode === 'parallel' && ai !== 0) {
-                        bordTop = 'L' + x9 + ' ' + y0 + 'L' + (x1 - _this.arcPadSmall) + ' ' + y0 + 'Q' + x1 + ' ' + y0 + ' ' + x1 + ' ' + (y0 + _this.arcPadSmall);
+                    var arcToRigth = 'M' + x3 + ' ' + y2 + 'L' + (x1 + _this.arcPadBig) + ' ' + y2 + 'Q' + x1 + ' ' + y2 + ' ' + x1 + ' ' + (y2 + _this.arcPadBig);
+                    var arcToLeft = 'Q' + x0 + ' ' + y2 + ' ' + (x0 - _this.arcPadBig) + ' ' + y2 + 'L' + x4 + ' ' + y2;
+                    var borderRight = 'L' + x1 + ' ' + (y1 - _this.arcPadSmall) + 'Q' + x1 + ' ' + y1 + ' ' + (x1 - _this.arcPadSmall) + ' ' + y1;
+                    var borderBottom = 'L' + (x0 + _this.arcPadSmall) + ' ' + y1 + 'Q' + x0 + ' ' + y1 + ' ' + x0 + ' ' + (y1 - _this.arcPadSmall);
+                    var borderLeftArc = 'L' + x0 + ' ' + (y0 + _this.arcPadSmall - _this.actionPad) + 'Q' + x0 + ' ' + (y0 - _this.actionPad) + ' ' + (x0 + _this.arcPadSmall) + ' ' + (y0 - _this.actionPad);
+                    var borderLeft = 'L' + x0 + ' ' + y0 + 'L' + x0 + ' ' + (y2 + _this.arcPadBig);
+                    if (i === 0 && ai === 0) {
+                        console.log(x0, y0);
+                        return arcToRigth + borderRight + borderBottom + borderLeftArc + 'L' + x2 + ' ' + (y0 - _this.actionPad);
                     }
-                    var bordRightTop = 'L' + x1 + ' ' + y3;
-                    var top = bordLeftTop + bordTop + bordRightTop;
-                    var commonArcToRight = 'L' + x6 + ' ' + (y2 + _this.arcPadBig) + 'Q' + x6 + ' ' + y2 + ' ' + (x6 + _this.arcPadBig) + ' ' + y2 + 'L' + x3 + ' ' + y2;
-                    var commonArcToLeft = 'L' + x8 + ' ' + (y2 + _this.arcPadBig) + 'Q' + x8 + ' ' + y2 + ' ' + (x8 - _this.arcPadBig) + ' ' + y2 + 'L' + x4 + ' ' + y2;
-                    if (i === 0) {
-                        if (ai === 0) {
-                            return bottom + top + lineToRight + arcToRight + commonArcToRight;
-                        }
-                        return bottom + top + lineToRight + arcToRight + 'L' + x6 + ' ' + (y2 - _this.actionPad - _this.arcPadBig);
+                    if (ai === 0) {
+                        return arcToRigth + borderRight + borderBottom + borderLeft + arcToLeft;
                     }
                     else {
-                        if (ai === 0) {
-                            return bottom + lineToLeft + arcToLeft + commonArcToLeft + top + lineToRight + arcToRight + commonArcToRight;
-                        }
-                        return bottom + lineToLeft + arcToLeft + 'L' + x8 + ' ' + (y2 - _this.actionPad - _this.arcPadBig * 2) + top + lineToRight + arcToRight + 'L' + x6 + ' ' + (y2 - _this.actionPad - _this.arcPadBig * 2);
+                        return 'M' + x1 + ' ' + (y0 - _this.arcPadSmall - _this.actionPad) + borderRight + borderBottom + 'L' + x0 + ' ' + (y0 - _this.arcPadSmall - _this.actionPad);
                     }
+                    // return 'M'+x0+' '+ y0+'L'+x1+' '+y0+'L'+x1+' '+y1+'L'+x0+' '+y1+'L'+x0+' '+y0;
                 });
                 // action并行或串行
                 var actionLength = d.actions.length;
@@ -531,13 +536,16 @@ var AppComponent = (function () {
         });
     };
     ;
-    return AppComponent;
+    OtherComponent.prototype.changeNav = function (val) {
+        this.router.navigate([val]);
+    };
+    return OtherComponent;
 }());
-AppComponent = __decorate([
+OtherComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        template: "<router-outlet></router-outlet>"
+        selector: 'other',
+        templateUrl: "../templates/other.html"
     }),
-    __metadata("design:paramtypes", [])
-], AppComponent);
-exports.AppComponent = AppComponent;
+    __metadata("design:paramtypes", [router_1.Router])
+], OtherComponent);
+exports.OtherComponent = OtherComponent;

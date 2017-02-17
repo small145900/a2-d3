@@ -11,6 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
+var demo_component_1 = require("./demo.component");
+var other_component_1 = require("./other.component");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
 var app_routing_1 = require("./app.routing");
@@ -28,7 +30,9 @@ AppModule = __decorate([
             app_routing_1.routing
         ],
         declarations: [
-            app_component_1.AppComponent
+            app_component_1.AppComponent,
+            demo_component_1.DemoComponent,
+            other_component_1.OtherComponent
         ],
         providers: [],
         bootstrap: [app_component_1.AppComponent]

@@ -1,12 +1,14 @@
 import { Component,OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+
 var d3 = require("d3/build/d3.min.js");
 
 
 @Component({
-  selector: 'my-app',
-  template: `<router-outlet></router-outlet>`
+  selector: 'demo',
+  templateUrl: `../templates/demo.html`
 })
-export class AppComponent implements OnInit { 
+export class DemoComponent implements OnInit { 
 	svgpad = 50;
 	stagePad = 140;
 	stageWidth = 30;
@@ -201,7 +203,7 @@ export class AppComponent implements OnInit {
 	];
 	stageLength = this.dataset.length;
 
-	constructor(){};
+	constructor(private router: Router){};
 
 	ngOnInit():void {
 		var currentDragIndex;
@@ -293,7 +295,7 @@ export class AppComponent implements OnInit {
 			})
 			.call(drag);
 
-		// add stage pic
+		// add stage circle
 		itemStage.append('circle')
 			.attr('cx',_this.stageWidth/2)
 			.attr('cy',_this.stageHeight/2)
@@ -565,6 +567,10 @@ export class AppComponent implements OnInit {
 				});
 			})
 	};
+
+	changeNav(val){
+    	this.router.navigate([val]);
+	}
 
 }
 		

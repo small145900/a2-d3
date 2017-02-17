@@ -9,9 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var d3 = require("d3/build/d3.min.js");
-var AppComponent = (function () {
-    function AppComponent() {
+var DemoComponent = (function () {
+    function DemoComponent(router) {
+        this.router = router;
         this.svgpad = 50;
         this.stagePad = 140;
         this.stageWidth = 30;
@@ -206,7 +208,7 @@ var AppComponent = (function () {
         this.stageLength = this.dataset.length;
     }
     ;
-    AppComponent.prototype.ngOnInit = function () {
+    DemoComponent.prototype.ngOnInit = function () {
         var currentDragIndex;
         var endPointIndex;
         var elementType = '';
@@ -282,7 +284,7 @@ var AppComponent = (function () {
             return 'translate(' + (i * (_this.stageWidth + _this.stagePad) + _this.svgpad) + ',' + (_this.stageHeight * 2) + ')';
         })
             .call(drag);
-        // add stage pic
+        // add stage circle
         itemStage.append('circle')
             .attr('cx', _this.stageWidth / 2)
             .attr('cy', _this.stageHeight / 2)
@@ -531,13 +533,16 @@ var AppComponent = (function () {
         });
     };
     ;
-    return AppComponent;
+    DemoComponent.prototype.changeNav = function (val) {
+        this.router.navigate([val]);
+    };
+    return DemoComponent;
 }());
-AppComponent = __decorate([
+DemoComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        template: "<router-outlet></router-outlet>"
+        selector: 'demo',
+        templateUrl: "../templates/demo.html"
     }),
-    __metadata("design:paramtypes", [])
-], AppComponent);
-exports.AppComponent = AppComponent;
+    __metadata("design:paramtypes", [router_1.Router])
+], DemoComponent);
+exports.DemoComponent = DemoComponent;

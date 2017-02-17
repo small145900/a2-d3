@@ -434,7 +434,7 @@ export class OtherComponent implements OnInit {
 								currentComponentY = 0;
 							}
 
-							c.y = (currentComponentY * (_this.componentPad + _this.componentHeight) + _this.componentPad*3;
+							c.y = currentComponentY * (_this.componentPad + _this.componentHeight) + _this.componentPad*3;
 							return c.y;
 						})
 						.attr('fill',function(a,r){
